@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Styling for the chatbot container */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff; /* Set a background color for the container */
+}
+
+/* Styling for the chatbot button */
+#chatbot-button {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#chatbot-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the chatbot window */
+#chatbot-window {
+    display: none;
+    background-color: #f9f9f9; /* Set a background color for the chat window */
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    max-height: 300px; /* Limit the maximum height of the chat window */
+    overflow-y: auto; /* Add scrollbars when content overflows */
+}
+
+/* Styling for chat messages */
+.chat-message {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #007BFF;
+    color: white;
+    align-self: flex-end;
+}
+
+.chatbot-message {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Styling for user input */
+#user-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}

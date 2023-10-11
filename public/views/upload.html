@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yoga and Wellness</title>
+    <link rel="stylesheet" href="your-styles.css"> <!-- Include your CSS file here if needed -->
+</head>
+<body>
+    <div class="box">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Yoga and Wellness</h3>
+        <p>Learn and practice proper yoga postures with us.</p>
+        
+        <!-- Hidden file input element -->
+        <input type="file" id="fileInput" style="display: none;" accept=".mp4">
+        
+        <!-- Use the <label> to style the link and associate it with the file input -->
+        <label for="fileInput" class="btn">
+            Upload Video <span class="fas fa-upload"></span>
+        </label>
+        
+        <div id="selectedFileDisplay"></div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const selectedFileDisplay = document.getElementById("selectedFileDisplay");
+    
+        fileInput.addEventListener("change", function () {
+            const selectedFile = fileInput.files[0];
+    
+            if (selectedFile) {
+                // Display the selected file name
+                selectedFileDisplay.textContent = "Selected file: " + selectedFile.name;
+    
+                // Create a FormData object to send the file to the server
+                const formData = new FormData();
+                formData.append("video", selectedFile); // "video" is the field name
+    
+                // Send the file to the server using the Fetch API
+                fetch("/upload", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error("File upload failed.");
+                    }
+                })
+                .then(data => {
+                    console.log(data); // Server response (e.g., success message)
+                })
+                .catch(error => {
+                    console.error(error); // Handle errors
+                });
+            } else {
+                selectedFileDisplay.textContent = "No file selected.";
+            }
+        });
+    </script>
+    
+</body>
+</html>

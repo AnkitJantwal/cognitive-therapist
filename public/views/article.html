@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Articles View</title>
+    <link rel="stylesheet" href="../article.css" />
+</head>
+
+<body>
+    <!-- <iframe src="header.html" width="100%" height="100" frameborder="0" scrolling="no"></iframe> -->
+  
+    <div id="loader">
+        <div id="progress"></div>
+      </div>
+    <header>
+        <h1>Articles</h1>
+    </header>
+    <div class="container">
+        <div class="article">
+            <img src="../image/aritcle1.jpg" alt="Article Image">
+            <div>
+                <h2>The Effects of Stress on Mental Health</h2>
+                <h4>Dr. Priyanka</h4>
+                <p> Chronic stress can have a negative impact on your mental health, leading to anxiety and depression.
+                    It can also cause physical symptoms such as headaches and muscle tension. To manage stress, try
+                    relaxation techniques like meditation or yoga, and make time for activities that you enjoy.</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <img src="../image/aritcle2.jpg" alt="Article Image">
+            <div>
+                <h2>The Dangers of Sitting Too Much</h2>
+                <h4>Dr.Tina Sharma</h4>
+                <p>Spending too much time on screens can lead to eye strain, headaches, and disrupted sleep patterns. It
+                    may also increase the risk of obesity and other health problems. To reduce screen time, try setting
+                    limits and taking frequent breaks to stretch and move around.</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <img src="../image/article3.jpg" alt="Article Image">
+            <div>
+                <h2>The Importance of Sleep for Overall Health</h2>
+                <h4>Dr.Suresh</h4>
+                <p> Sleep is crucial for physical and mental well-being. Lack of sleep can lead to a range of health
+                    issues, from fatigue and irritability to a weakened immune system. Aim for at least 7-8 hours of
+                    sleep each night, and establish a relaxing bedtime routine to help you fall asleep more easily.</p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../image/aritcle4.jpg" alt="Article Image">
+            <div>
+                <h2>The Importance of Sleep for Health</h2>
+                <h4>Vishaka</h4>
+                <p>Eating a healthy, balanced diet is essential for overall health and well-being. A diet high in
+                    fruits, vegetables, and whole grains can reduce the risk of chronic diseases like heart disease and
+                    cancer. On the other hand, a diet high in processed foods and sugar can lead to weight gain and
+                    other health issues. Make small changes to your diet, like adding more fruits and vegetables and
+                    reducing sugary drinks, to improve your overall health.</p>
+
+            </div>
+        </div>
+        <div class="article">
+            <img src="../image/article6.jpg" alt="Article Image">
+            <div>
+                <h2>The Benefits of Regular Exercise</h2>
+                <h4>Dr.Himanshu </h4>
+                <p>Exercise is essential for maintaining good health, both physically and mentally. It can improve
+                    cardiovascular health, strengthen muscles and bones, and reduce the risk of chronic diseases like
+                    diabetes and cancer. Even small amounts of exercise, like walking or stretching, can have
+                    significant health benefits.</p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../image/aritcle5.jpg" alt="Article Image">
+            <div>
+                <h2>The Dangers of Poor Posture</h2>
+                <h4>Madhav Chauhan</h4>
+                <p> Poor posture can cause a range of health problems, from back and neck pain to poor circulation and
+                    reduced lung capacity. To improve your posture, try to maintain a neutral spine position and avoid
+                    slouching. Regular stretching and strengthening exercises can also help.</p>
+            </div>
+        </div>
+
+    </div>
+  
+    <script>
+        window.addEventListener("load", function () {
+          const loader = document.getElementById("loader");
+          const container = document.querySelector('.container')
+          container.style.display = 'none';
+          setTimeout(function () {
+            loader.style.display = "none";
+            container.style.display = "inline"
+          }, 1500);
+        });
+      </script>
+</body>
+
+</html>

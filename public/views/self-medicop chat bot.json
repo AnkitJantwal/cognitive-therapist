@@ -1,0 +1,103 @@
+{
+    "projectFileVersion": "2022-10-01-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "Conversation",
+        "settings": {
+            "confidenceThreshold": 0
+        },
+        "projectName": "self-medicop",
+        "multilingual": true,
+        "description": "how to reach to the doctors",
+        "language": "en-us"
+    },
+    "assets": {
+        "projectKind": "Conversation",
+        "intents": [
+            {
+                "category": "None"
+            },
+            {
+                "category": "which treatment do you want"
+            },
+            {
+                "category": "how to contact us"
+            },
+            {
+                "category": "is there any subscriptions plan"
+            }
+        ],
+        "entities": [
+            {
+                "category": "ayurvedic,homopathic,allopathic",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "mail to us",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "yes you have subscription plans",
+                "compositionSetting": "combineComponents"
+            }
+        ],
+        "utterances": [
+            {
+                "text": "ayurvedic,homopathic,allopathic",
+                "language": "en-us",
+                "intent": "which treatment do you want",
+                "entities": [],
+                "dataset": "Test"
+            },
+            {
+                "text": "yes you have subscription plan",
+                "language": "en-us",
+                "intent": "is there any subscriptions plan",
+                "entities": [],
+                "dataset": "Test"
+            },
+            {
+                "text": "mail to us",
+                "language": "en-us",
+                "intent": "how to contact us",
+                "entities": [],
+                "dataset": "Test"
+            },
+            {
+                "text": "yes you have subscription plan",
+                "language": "en-us",
+                "intent": "is there any subscriptions plan",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "ayurvedic,homopathic,allopathic",
+                "language": "en-us",
+                "intent": "which treatment do you want",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "yes you have",
+                "language": "en-us",
+                "intent": "is there any subscriptions plan",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "yes you have subscriptions plan",
+                "language": "en-us",
+                "intent": "is there any subscriptions plan",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "mail to us",
+                "language": "en-us",
+                "intent": "how to contact us",
+                "entities": [],
+                "dataset": "Train"
+            }
+        ]
+    }
+}
